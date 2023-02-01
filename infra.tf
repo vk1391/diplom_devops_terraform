@@ -81,7 +81,7 @@ resource "yandex_compute_instance" "node3" {
   network_interface {
     subnet_id = yandex_vpc_subnet.subnet_terraform.id
     nat = true
-    ip_address = "192.168.15.17"
+    ip_address = "192.168.15.19"
   }
 
   metadata = {

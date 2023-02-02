@@ -5,8 +5,8 @@ resource "yandex_compute_instance" "node1" {
   allow_stopping_for_update = true
 
   resources {
-    cores  = 4
-    memory = 4
+    cores  = 6
+    memory = 6
   }
 
   boot_disk {

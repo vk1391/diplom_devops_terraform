@@ -66,7 +66,7 @@ resource "yandex_compute_instance" "node3" {
   allow_stopping_for_update = true
 
   resources {
-    cores  = 4
+    cores  = 2
     memory = 4
   }
 

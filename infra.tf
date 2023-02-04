@@ -74,7 +74,7 @@ resource "yandex_compute_instance" "node3" {
     initialize_params {
       image_id = "fd83n3uou8m03iq9gavu"
       type = "network-nvme"
-      size = "31"
+      size = "30"
     }
   }
 

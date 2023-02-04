@@ -60,7 +60,7 @@ resource "yandex_compute_instance" "node2" {
   ]
 }
 resource "yandex_compute_instance" "node3" {
-  name = "node3"
+  name = "node4"
   zone                      = "ru-central1-a"
   hostname                  = "node03.netology.cloud"
   allow_stopping_for_update = true

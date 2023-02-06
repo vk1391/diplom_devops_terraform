@@ -1,5 +1,5 @@
 resource "yandex_compute_instance" "node01" {
-  name = "node1"
+  name = "node01"
   zone                      = "ru-central1-a"
   hostname                  = "node001.netology.cloud"
   allow_stopping_for_update = true
@@ -28,7 +28,7 @@ resource "yandex_compute_instance" "node01" {
   }
 }
 resource "yandex_compute_instance" "node02" {
-  name = "node2"
+  name = "node02"
   zone                      = "ru-central1-a"
   hostname                  = "node002.netology.cloud"
   allow_stopping_for_update = true
@@ -57,7 +57,7 @@ resource "yandex_compute_instance" "node02" {
   }
 }
 resource "yandex_compute_instance" "node03" {
-  name = "node3"
+  name = "node03"
   zone                      = "ru-central1-a"
   hostname                  = "node003.netology.cloud"
   allow_stopping_for_update = true

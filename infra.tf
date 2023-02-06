@@ -13,7 +13,7 @@ resource "yandex_compute_instance" "node1" {
     initialize_params {
       image_id = "fd83n3uou8m03iq9gavu"
       type = "network-nvme"
-      size = "50"
+      size = "20"
     }
   }
 
@@ -42,7 +42,7 @@ resource "yandex_compute_instance" "node2" {
     initialize_params {
       image_id = "fd83n3uou8m03iq9gavu"
       type = "network-nvme"
-      size = "30"
+      size = "10"
     }
   }
 
@@ -71,7 +71,7 @@ resource "yandex_compute_instance" "node3" {
     initialize_params {
       image_id = "fd83n3uou8m03iq9gavu"
       type = "network-nvme"
-      size = "30"
+      size = "10"
     }
   }
 

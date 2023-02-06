@@ -1,7 +1,7 @@
-resource "yandex_compute_instance" "node1" {
+resource "yandex_compute_instance" "node01" {
   name = "node1"
   zone                      = "ru-central1-a"
-  hostname                  = "node01.netology.cloud"
+  hostname                  = "node001.netology.cloud"
   allow_stopping_for_update = true
 
   resources {
@@ -27,10 +27,10 @@ resource "yandex_compute_instance" "node1" {
     ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
 }
-resource "yandex_compute_instance" "node2" {
+resource "yandex_compute_instance" "node02" {
   name = "node2"
   zone                      = "ru-central1-a"
-  hostname                  = "node02.netology.cloud"
+  hostname                  = "node002.netology.cloud"
   allow_stopping_for_update = true
 
   resources {
@@ -56,10 +56,10 @@ resource "yandex_compute_instance" "node2" {
     ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
 }
-resource "yandex_compute_instance" "node3" {
+resource "yandex_compute_instance" "node03" {
   name = "node3"
   zone                      = "ru-central1-a"
-  hostname                  = "node03.netology.cloud"
+  hostname                  = "node003.netology.cloud"
   allow_stopping_for_update = true
 
   resources {

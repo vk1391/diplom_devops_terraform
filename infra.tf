@@ -18,9 +18,9 @@ resource "yandex_compute_instance" "node1" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.subnet_terraform.id
+    subnet_id = "e9br0gkblpm24uqq5up4"
     nat = true
-    ip_address = "192.168.15.15"
+    #ip_address = "192.168.15.15"
   }
 
   metadata = {
@@ -47,17 +47,14 @@ resource "yandex_compute_instance" "node2" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.subnet_terraform.id
+    subnet_id = "e9br0gkblpm24uqq5up4"
     nat = true
-    ip_address = "192.168.15.16"
+    #ip_address = "192.168.15.16"
   }
 
   metadata = {
     ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
-  depends_on = [
-    yandex_vpc_subnet.subnet_terraform
-  ]
 }
 resource "yandex_compute_instance" "node3" {
   name = "node3"
@@ -79,15 +76,14 @@ resource "yandex_compute_instance" "node3" {
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.subnet_terraform.id
+    subnet_id = "e9br0gkblpm24uqq5up4"
     nat = true
-    ip_address = "192.168.15.17"
+    #ip_address = "192.168.15.17"
   }
 
   metadata = {
     ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
-  depends_on = [
-    yandex_vpc_subnet.subnet_terraform
+
   ]
 }

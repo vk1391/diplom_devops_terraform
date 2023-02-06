@@ -1,7 +1,7 @@
-resource "yandex_compute_instance" "node1" {
-  name = "node1"
+resource "yandex_compute_instance" "node01" {
+  name = "node01"
   zone                      = "ru-central1-a"
-  hostname                  = "node01.netology.cloud"
+  hostname                  = "node001.netology.cloud"
   allow_stopping_for_update = true
 
   resources {
@@ -12,25 +12,24 @@ resource "yandex_compute_instance" "node1" {
   boot_disk {
     initialize_params {
       image_id = "fd83n3uou8m03iq9gavu"
-      type = "network-nvme"
-      size = "50"
+      size = "20"
     }
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.subnet_terraform.id
+    subnet_id = "e9br0gkblpm24uqq5up4"
     nat = true
-    ip_address = "192.168.15.15"
+    #ip_address = "192.168.15.15"
   }
 
   metadata = {
     ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
 }
-resource "yandex_compute_instance" "node2" {
-  name = "node2"
+resource "yandex_compute_instance" "node02" {
+  name = "node02"
   zone                      = "ru-central1-a"
-  hostname                  = "node02.netology.cloud"
+  hostname                  = "node002.netology.cloud"
   allow_stopping_for_update = true
 
   resources {
@@ -41,28 +40,24 @@ resource "yandex_compute_instance" "node2" {
   boot_disk {
     initialize_params {
       image_id = "fd83n3uou8m03iq9gavu"
-      type = "network-nvme"
-      size = "30"
+      size = "10"
     }
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.subnet_terraform.id
+    subnet_id = "e9br0gkblpm24uqq5up4"
     nat = true
-    ip_address = "192.168.15.16"
+    #ip_address = "192.168.15.16"
   }
 
   metadata = {
     ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
-  depends_on = [
-    yandex_vpc_subnet.subnet_terraform
-  ]
 }
-resource "yandex_compute_instance" "node3" {
-  name = "node3"
+resource "yandex_compute_instance" "node03" {
+  name = "node03"
   zone                      = "ru-central1-a"
-  hostname                  = "node03.netology.cloud"
+  hostname                  = "node003.netology.cloud"
   allow_stopping_for_update = true
 
   resources {
@@ -73,21 +68,17 @@ resource "yandex_compute_instance" "node3" {
   boot_disk {
     initialize_params {
       image_id = "fd83n3uou8m03iq9gavu"
-      type = "network-nvme"
-      size = "30"
+      size = "10"
     }
   }
 
   network_interface {
-    subnet_id = yandex_vpc_subnet.subnet_terraform.id
+    subnet_id = "e9br0gkblpm24uqq5up4"
     nat = true
-    ip_address = "192.168.15.17"
+    #ip_address = "192.168.15.17"
   }
 
   metadata = {
     ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
-  depends_on = [
-    yandex_vpc_subnet.subnet_terraform
-  ]
 }

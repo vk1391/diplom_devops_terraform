@@ -1,9 +1,9 @@
-variable "token" {
+variable "yandex_token" {
   type = string
 }
-variable "cloud_id" {
+variable "yandex_cloudid" {
   type = string
 }
-variable "folder_id" {
+variable "yandex_folder_id" {
   type = string
 }

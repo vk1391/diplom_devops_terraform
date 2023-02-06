@@ -12,7 +12,6 @@ resource "yandex_compute_instance" "node01" {
   boot_disk {
     initialize_params {
       image_id = "fd83n3uou8m03iq9gavu"
-      type = "network-nvme"
       size = "20"
     }
   }
@@ -41,7 +40,6 @@ resource "yandex_compute_instance" "node02" {
   boot_disk {
     initialize_params {
       image_id = "fd83n3uou8m03iq9gavu"
-      type = "network-nvme"
       size = "10"
     }
   }
@@ -70,7 +68,6 @@ resource "yandex_compute_instance" "node03" {
   boot_disk {
     initialize_params {
       image_id = "fd83n3uou8m03iq9gavu"
-      type = "network-nvme"
       size = "10"
     }
   }
